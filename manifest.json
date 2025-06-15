@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Kinopoisk Redirect",
+  "version": "1.0",
+  "description": "Перенаправляет с Kinopoisk на SSpoisk",
+  "action": {
+    "default_icon": {
+      "16": "16.png",
+      "48": "48.png",
+      "128": "128.png"
+    },
+    "default_title": "Перейти на SSpoisk"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["tabs"],
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png"
+  }
+}
