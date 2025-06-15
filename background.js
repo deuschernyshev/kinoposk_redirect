@@ -1,7 +1,7 @@
 chrome.action.onClicked.addListener((tab) => {
   if (tab.url && tab.url.includes('kinopoisk.ru')) {
     const newUrl = tab.url.replace(/kinopoisk\.ru/g, 'sspoisk.ru');
-    chrome.tabs.update(tab.id, { url: newUrl });
+    chrome.tabs.create({ url: newUrl, active: true });
   } else {
     chrome.action.setTitle({
       tabId: tab.id,
@@ -10,7 +10,7 @@ chrome.action.onClicked.addListener((tab) => {
     setTimeout(() => {
       chrome.action.setTitle({
         tabId: tab.id,
-        title: "Перейти на Sspoisk"
+        title: "Открыть в Sspoisk"
       });
     }, 2000);
   }
